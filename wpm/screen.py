@@ -207,6 +207,13 @@ class Screen(object):
         return False
 
     @staticmethod
+    def is_end_of_transmission(key):
+        """Checks for end of transmission key."""
+        if len(key) == 1:
+            return ord(key) == curses.ascii.ETB
+        return False
+
+    @staticmethod
     def is_backspace(key):
         """Checks for backspace key."""
         if len(key) > 1:

@@ -252,7 +252,7 @@ class GameManager(object):
 
         self.recorder.add(self.elapsed, key, self.position, self.incorrect)
 
-        if Screen.is_start_of_header(key):
+        if Screen.is_start_of_header(key) or Screen.is_end_of_transmission(key):
             self.position -= (len(self._edit) - self.incorrect)
             self.incorrect = 0
             self._edit = ""
