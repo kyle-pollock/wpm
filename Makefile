@@ -16,6 +16,16 @@ check: test lint pylint tox
 tox:
 	$(PYTHON3) -m tox
 
+# run:
+# 	PYTHONPATH=. $(PYTHON) wpm --load-json ./speed.json
+# run:
+# 	PYTHONPATH=. $(PYTHON) wpm --short
+# run:
+# 	PYTHONPATH=. $(PYTHON) wpm --id 192
+# run:
+# 	PYTHONPATH=. $(PYTHON) wpm --load caps
+# run:
+# 	PYTHONPATH=. $(PYTHON) wpm --load pinky
 run:
 	PYTHONPATH=. $(PYTHON) wpm
 
